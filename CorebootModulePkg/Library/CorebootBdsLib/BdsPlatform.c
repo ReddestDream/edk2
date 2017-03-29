@@ -1207,12 +1207,6 @@ Returns:
   InstallReadyToLock();
 
   //
-  // invoke SMM handler to put eMMC/SD devices into PCI mode for 
-  // detection as boot devices by Tianocore
-  //
-  IoWrite8(0xb2, 0xcc);
-
-  //
   // Init the time out value
   //
   Timeout = PcdGet16 (PcdPlatformBootTimeOut);

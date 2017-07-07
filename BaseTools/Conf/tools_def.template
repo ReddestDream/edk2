@@ -205,8 +205,9 @@ DEFINE GCC48_X64_PREFIX        = ENV(GCC48_BIN)
 DEFINE GCC49_IA32_PREFIX       = ENV(GCC49_BIN)
 DEFINE GCC49_X64_PREFIX        = ENV(GCC49_BIN)
 
-DEFINE GCC5_IA32_PREFIX        = ENV(GCC5_BIN)
-DEFINE GCC5_X64_PREFIX         = ENV(GCC5_BIN)
+DEFINE GCC5_BASE               = /home/mattd/coreboot/util/crossgcc/xgcc/bin/
+DEFINE GCC5_IA32_PREFIX        = DEF(GCC5_BASE)i386-elf-
+DEFINE GCC5_X64_PREFIX         = DEF(GCC5_BASE)x86_64-elf-
 DEFINE GCC_HOST_PREFIX         = ENV(GCC_HOST_BIN)
 
 DEFINE UNIX_IASL_BIN           = ENV(IASL_PREFIX)iasl
@@ -5053,7 +5054,7 @@ RELEASE_GCC49_AARCH64_DLINK_FLAGS  = DEF(GCC49_AARCH64_DLINK_FLAGS)
 ####################################################################################
 *_GCC5_*_*_FAMILY                = GCC
 
-*_GCC5_*_MAKE_PATH               = DEF(GCC_HOST_PREFIX)make
+*_GCC5_*_MAKE_PATH               = make
 *_GCC5_*_*_DLL                   = ENV(GCC5_DLL)
 *_GCC5_*_ASL_PATH                = DEF(UNIX_IASL_BIN)
 

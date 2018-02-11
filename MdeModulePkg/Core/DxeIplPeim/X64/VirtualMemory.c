@@ -749,11 +749,6 @@ CreateIdentityMappingPageTables (
       );
   }
 
-  //
-  // Protect the page table by marking the memory used for page table to be
-  // read-only.
-  //
-  EnablePageTableProtection ((UINTN)PageMap, TRUE);
 
   if (PcdGetBool (PcdSetNxForStack)) {
     EnableExecuteDisableBit ();
